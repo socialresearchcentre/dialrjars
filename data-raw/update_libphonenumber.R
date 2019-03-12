@@ -1,9 +1,10 @@
 library(xml2)
+library(dplyr)
+library(stringr)
 
-#' @import xml2
-.update_libphonenumber <- function() {
+update_libphonenumber <- function(pkg_location = ".") {
   message("dialr: checking for latest version of libphonenumber")
-  jar_file <- list.files(system.file("java", package = "dialr"), ".*.jar$")
+  jar_file <- list.files(file.path(pkg_location, "inst/java"), ".*.jar$")
 
   current <- sub("^libphonenumber-(.*).jar$", "\\1", jar_file)
   if (length(current) == 0) current <- "none"
@@ -17,14 +18,30 @@ library(xml2)
       message("dialr: updating libphonenumber from version ", current, " to ", latest)
       download.file(paste0("http://repo1.maven.org/maven2/com/googlecode/libphonenumber/libphonenumber/",
                            latest, "/libphonenumber-", latest, ".jar"),
-                    paste0(system.file("java", package = "dialr"), "/libphonenumber-", latest, ".jar"),
+                    paste0("inst/java/libphonenumber-", latest, ".jar"),
                     quiet = TRUE)
 
-      invisible(file.remove(system.file("java", jar_file, package = "dialr")))
+      file.remove(file.path(pkg_location, "inst/java", jar_file))
     }
     message("dialr: up to date!")
   },
   error = function(e) { message("dialr: libphonenumber update failed, continuing with version ", current) })
+
+  if (str_detect(latest, "[0-9]+\\.[0-9]+\\.[0-9]+"))
+    latest
+  else
+    current
+
 }
 
-.update_libphonenumber()
+update_pkg_version <- function(vers, pkg_location = "."){
+  desc <- readLines(file.path(pkg_location, "DESCRIPTION"))
+  desc[str_detect(desc, "^Version:")] <- paste0("Version: ", vers)
+  writeLines(desc, file.path(pkg_location, "DESCRIPTION"))
+
+  return(vers)
+}
+
+vers <- update_libphonenumber()
+update_pkg_version(vers)
+devtools::build(binary = TRUE, args = c('--preclean'))
