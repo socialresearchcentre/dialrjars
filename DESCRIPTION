@@ -2,7 +2,7 @@ Package: dialrjars
 Type: Package
 Title: Package required libphonenumber jars for the dialr package
 Description: The dialrjars package collects libphonenumber jars required for the dialr package.
-Version: 8.10.7
+Version: 8.10.8
 Authors@R: c(
     person("Danny", "Smith", email="danny@gorcha.org", role=c("aut", "cre")),
     person("Google Inc.", role = c("ctb", "cph"), comment = "libphonenumber"),
