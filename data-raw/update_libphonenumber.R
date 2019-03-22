@@ -19,7 +19,7 @@ update_libphonenumber <- function(pkg_location = ".") {
       download.file(paste0("http://repo1.maven.org/maven2/com/googlecode/libphonenumber/libphonenumber/",
                            latest, "/libphonenumber-", latest, ".jar"),
                     paste0("inst/java/libphonenumber-", latest, ".jar"),
-                    quiet = TRUE)
+                    quiet = TRUE, mode = "wb")
 
       file.remove(file.path(pkg_location, "inst/java", jar_file))
     }
