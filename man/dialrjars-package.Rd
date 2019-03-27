@@ -8,6 +8,14 @@
 \description{
 The dialrjars package collects libphonenumber jars required for the dialr package.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/socialresearchcentre/dialrjars}
+  \item Report bugs at \url{https://github.com/socialresearchcentre/dialrjars/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Danny Smith \email{danny@gorcha.org}
 

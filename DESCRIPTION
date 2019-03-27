@@ -1,7 +1,6 @@
 Package: dialrjars
 Type: Package
 Title: Package required libphonenumber jars for the dialr package
-Description: The dialrjars package collects libphonenumber jars required for the dialr package.
 Version: 8.10.8
 Authors@R: c(
     person("Danny", "Smith", email="danny@gorcha.org", role=c("aut", "cre")),
@@ -10,11 +9,14 @@ Authors@R: c(
     person("Ian", "Galpin", role = c("ctb", "cph"), comment = "libphonenumber"),
     person("Ben", "Gertzfield", role = c("ctb", "cph"), comment = "libphonenumber")
     )
+Description: The dialrjars package collects libphonenumber jars required for the dialr package.
+License: GPL-3
+URL: https://github.com/socialresearchcentre/dialrjars
+BugReports: https://github.com/socialresearchcentre/dialrjars/issues
 Depends:
     R (>= 3.1.2)
 Imports: 
     rJava,
-License: GPL-3
 Copyright: See file COPYRIGHTS
 NeedsCompilation: no
 SystemRequirements: java (>= 1.6)
