@@ -1,25 +1,40 @@
-Package: dialrjars
 Type: Package
-Title: Package required libphonenumber jars for the dialr package
+Package: dialrjars
+Title: Package required libphonenumber jars for the dialr
+    package
 Version: 8.10.8
-Authors@R: c(
-    person("Danny", "Smith", email="danny@gorcha.org", role=c("aut", "cre")),
-    person("Google Inc.", role = c("ctb", "cph"), comment = "libphonenumber"),
-    person("Vonage Holdings Corp.", role = c("ctb", "cph"), comment = "libphonenumber"),
-    person("Ian", "Galpin", role = c("ctb", "cph"), comment = "libphonenumber"),
-    person("Ben", "Gertzfield", role = c("ctb", "cph"), comment = "libphonenumber")
-    )
-Description: The dialrjars package collects libphonenumber jars required for the dialr package.
+Authors@R: 
+    c(person(given = "Danny",
+             family = "Smith",
+             role = c("aut", "cre"),
+             email = "danny@gorcha.org"),
+      person(given = "Google Inc.",
+             role = c("ctb", "cph"),
+             comment = "libphonenumber"),
+      person(given = "Vonage Holdings Corp.",
+             role = c("ctb", "cph"),
+             comment = "libphonenumber"),
+      person(given = "Ian",
+             family = "Galpin",
+             role = c("ctb", "cph"),
+             comment = "libphonenumber"),
+      person(given = "Ben",
+             family = "Gertzfield",
+             role = c("ctb", "cph"),
+             comment = "libphonenumber"))
+Description: The dialrjars package collects libphonenumber jars
+    required for the dialr package.
 License: GPL-3
 URL: https://github.com/socialresearchcentre/dialrjars
-BugReports: https://github.com/socialresearchcentre/dialrjars/issues
+BugReports: 
+    https://github.com/socialresearchcentre/dialrjars/issues
 Depends:
-    R (>= 3.1.2)
+    R (>= 3.1)
 Imports: 
-    rJava,
+    rJava
 Copyright: See file COPYRIGHTS
-NeedsCompilation: no
-SystemRequirements: java (>= 1.6)
 Encoding: UTF-8
 LazyData: true
+NeedsCompilation: no
 RoxygenNote: 6.1.1
+SystemRequirements: java (>= 1.6)
