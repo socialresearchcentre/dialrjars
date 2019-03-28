@@ -27,28 +27,15 @@ update_libphonenumber <- function(pkg_location = ".") {
   },
   error = function(e) { message("dialrjars: libphonenumber update failed, continuing with version ", current) })
 
-  if (str_detect(latest, "[0-9]+\\.[0-9]+\\.[0-9]+"))
+  if (str_detect(latest, "^[0-9]+\\.[0-9]+\\.[0-9]+$"))
     latest
   else
     current
 
 }
 
-get_pkg_version <- function(pkg_location = ".") {
-  desc <- readLines(file.path(pkg_location, "DESCRIPTION"))
-  str_replace(desc[str_detect(desc, "^Version:")], "^Version:\\s*", "")
-}
-
-update_pkg_version <- function(vers, pkg_location = "."){
-  desc <- readLines(file.path(pkg_location, "DESCRIPTION"))
-  desc[str_detect(desc, "^Version:")] <- paste0("Version: ", vers)
-  writeLines(desc, file.path(pkg_location, "DESCRIPTION"))
-
-  invisible(vers)
-}
-
 update_dialrjars <- function() {
-  current <- get_pkg_version()
+  current <- desc::desc_get_version()
 
   message("dialrjars: checking for package updates for version ", current)
   latest <- update_libphonenumber()
@@ -59,7 +46,7 @@ update_dialrjars <- function() {
   }
 
   message("dialrjars: updating version in DESCRIPTION to ", latest)
-  update_pkg_version(latest)
+  desc::desc_set_version(latest)
 
   message("dialrjars: committing changes to git")
   git2r::add(path = "inst/java")
