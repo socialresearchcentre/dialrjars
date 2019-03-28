@@ -32,6 +32,8 @@ Depends:
     R (>= 3.1)
 Imports: 
     rJava
+Suggests: 
+    testthat
 Copyright: See file COPYRIGHTS
 Encoding: UTF-8
 LazyData: true
