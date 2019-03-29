@@ -15,6 +15,7 @@ matrix:
   - r: release
   - r: release
     os: osx
+    r_binary_packages: rJava
   - r: oldrel
   - r: 3.3
   - r: 3.2
