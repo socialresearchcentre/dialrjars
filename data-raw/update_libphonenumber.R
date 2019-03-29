@@ -48,9 +48,15 @@ update_dialrjars <- function() {
   message("dialrjars: updating version in DESCRIPTION to ", latest)
   desc::desc_set_version(latest)
 
+  message("dialrjars: updating NEWS.md for version ", latest)
+  usethis:::use_news_heading(paste0(latest,
+                                    "\n\n* Update to libphonenumber version ",
+                                    latest))
+
   message("dialrjars: committing changes to git")
   git2r::add(path = "inst/java")
   git2r::add(path = "DESCRIPTION")
+  git2r::add(path = "NEWS.md")
   git2r::commit(message = paste0("Update libphonenumber to version ", latest))
 
   message("dialrjars: pushing to github")
