@@ -1,5 +1,14 @@
+## Resubmission
+
+This is a resubmission. In this version I have:
+
+* put Title in DESCRIPTION into title case
+
+* single quoted software names in DESCRIPTION.
+
 ## Test environments
 * local: win install, R 3.5.1
+* local: ubuntu 18.04 install, R 3.5.3
 * travis ubuntu 14.04: 3.1, 3.2, 3.3, oldrel, release, devel
 * travis osx 10.13.3: release
 * win-builder: windows-x86_64-devel
