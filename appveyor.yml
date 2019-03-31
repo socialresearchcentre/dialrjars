@@ -19,6 +19,8 @@ platform: x64
 environment:
   global:
     R_CHECK_ARGS: --no-multiarch --no-manual
+    # only install binaries to avoid issues with rJava source install
+    PKGTYPE: binary
 
   matrix:
   - R_VERSION: devel
