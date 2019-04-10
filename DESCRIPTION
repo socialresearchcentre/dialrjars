@@ -21,8 +21,8 @@ Authors@R:
              family = "Gertzfield",
              role = c("ctb", "cph"),
              comment = "libphonenumber"))
-Description: The 'dialrjars' package collects 'libphonenumber' jars
-    required for the 'dialr' package.
+Description: Collects 'libphonenumber' jars required for the
+    'dialr' package.
 License: GPL-3
 URL: https://github.com/socialresearchcentre/dialrjars
 BugReports: 

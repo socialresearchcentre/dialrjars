@@ -2,9 +2,7 @@
 
 This is a resubmission. In this version I have:
 
-* put Title in DESCRIPTION into title case
-
-* single quoted software names in DESCRIPTION.
+* removed redundancy in the Description field
 
 ## Test environments
 * local: win install, R 3.5.1
