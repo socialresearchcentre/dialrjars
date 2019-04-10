@@ -60,7 +60,10 @@ update_dialrjars <- function() {
   git2r::commit(message = paste0("Update libphonenumber to version ", latest))
 
   message("dialrjars: pushing to github")
-  git2r::push()
+  tryCatch(git2r::push(),
+           error = function(e) {
+             warning("dialrjars: failed to push to github with error:\n  ", e, call. = FALSE)
+           })
 
   message("dialrjars: building new binary")
   devtools::build(binary = TRUE, args = c('--preclean'))
