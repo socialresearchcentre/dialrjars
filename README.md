@@ -13,6 +13,9 @@ dialrjars provides the jars for [Google's libphonenumber library](https://github
 ## Installation
 
 ``` r
-# Install the development version from GitHub:
+# Install from CRAN
+install.packages("dialrjars")
+
+# Or the development version from GitHub
 devtools::install_github("socialresearchcentre/dialrjars")
 ```

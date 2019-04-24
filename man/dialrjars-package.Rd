@@ -4,14 +4,16 @@
 \name{dialrjars-package}
 \alias{dialrjars}
 \alias{dialrjars-package}
-\title{Package required libphonenumber jars for the dialr package}
+\title{dialrjars: Required 'libphonenumber' jars for the 'dialr' Package}
 \description{
-The dialrjars package collects libphonenumber jars required for the dialr package.
+Collects 'libphonenumber' jars required for the
+    'dialr' package.
 }
 \seealso{
 Useful links:
 \itemize{
   \item \url{https://github.com/socialresearchcentre/dialrjars}
+  \item \url{https://github.com/googlei18n/libphonenumber}
   \item Report bugs at \url{https://github.com/socialresearchcentre/dialrjars/issues}
 }
 

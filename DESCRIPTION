@@ -24,7 +24,8 @@ Authors@R:
 Description: Collects 'libphonenumber' jars required for the
     'dialr' package.
 License: GPL-3
-URL: https://github.com/socialresearchcentre/dialrjars
+URL: https://github.com/socialresearchcentre/dialrjars,
+    https://github.com/googlei18n/libphonenumber
 BugReports: 
     https://github.com/socialresearchcentre/dialrjars/issues
 Depends:
