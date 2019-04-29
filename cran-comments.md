@@ -1,25 +1,13 @@
-## Resubmission
-
-This is a resubmission. In this version I have:
-
-* removed redundancy in the Description field
-
 ## Test environments
 * local: win install, R 3.5.1
-* local: ubuntu 18.04 install, R 3.5.3
+* local: ubuntu 18.04 install, R 3.6.0
 * travis ubuntu 14.04: 3.1, 3.2, 3.3, oldrel, release, devel
 * travis osx 10.13.3: release
 * win-builder: windows-x86_64-devel
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
-
-* This is a new release.
-
-* checking CRAN incoming feasibility ... NOTE
-Maintainer: 'Danny Smith <danny@gorcha.org>'
-New submission
+0 errors | 0 warnings | 0 note
 
 ## devtools::check()
 
@@ -28,7 +16,7 @@ R CMD check results
 
 ## Reverse dependencies
 
-This is a new release, so there are no reverse dependencies.
+There are no reverse dependencies.
 
 ## Notes
 
