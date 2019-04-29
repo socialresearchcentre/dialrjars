@@ -1,3 +1,6 @@
+# dialrjars 8.10.10
+
+* Update to libphonenumber version 8.10.10
 
 * Bring R version dependency to 3.2.3 in line with dialr package.
 
