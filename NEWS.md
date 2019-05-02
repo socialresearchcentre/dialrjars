@@ -1,3 +1,7 @@
+# dialrjars 8.10.11
+
+* Update to libphonenumber version 8.10.11
+
 # dialrjars 8.10.10
 
 * Update to libphonenumber version 8.10.10
