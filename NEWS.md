@@ -1,3 +1,10 @@
+# dialrjars (development version)
+
+* Add additional jars from libphonenumber to support geolocation, timezone derivation and carrier lookup:
+    * carrier
+    * geocoder
+    * prefixmapper
+
 # dialrjars 8.10.11
 
 * Update to libphonenumber version 8.10.11
