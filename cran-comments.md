@@ -1,7 +1,7 @@
 ## Test environments
 * local: win install, R 3.5.1
 * local: ubuntu 18.04 install, R 3.6.0
-* travis ubuntu 14.04: 3.1, 3.2, 3.3, oldrel, release, devel
+* travis ubuntu 14.04: 3.2, 3.3, 3.4, oldrel, release, devel
 * travis osx 10.13.3: release
 * win-builder: windows-x86_64-devel
 
@@ -20,5 +20,4 @@ There are no reverse dependencies.
 
 ## Notes
 
-This package stores the jars for the dialr package, which will be submitted to
-cran once dialrjars has been approved.
+This package stores the jars for the dialr package.
