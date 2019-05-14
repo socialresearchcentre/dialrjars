@@ -21,16 +21,16 @@ update_libphonenumber <- function(jar_name = "libphonenumber", pkg_location = ".
                     quiet = TRUE, mode = "wb")
 
       file.remove(file.path(pkg_location, "inst/java", jar_file))
+    } else {
+      message("dialrjars: '", jar_name, "' jar is up to date!")
     }
-    message("dialrjars: '", jar_name, "' jar is up to date!")
   },
   error = function(e) { message("dialrjars: '", jar_name, "' jar update failed, continuing with version ", current) })
 
-  if (grepl("^[0-9]+\\.[0-9]+(\\.[0-9]+)?$", latest))
+  if (grepl("^[0-9]+\\.[0-9]+(\\.[0-9]+)?$", latest) & latest != current)
     latest
   else
-    current
-
+    NULL
 }
 
 update_dialrjars <- function() {
@@ -39,22 +39,26 @@ update_dialrjars <- function() {
   message("dialrjars: checking for package updates for version ", current)
   latest <- update_libphonenumber()
 
-  if (current == latest) {
+  if (is.null(latest)) {
     message("dialrjars: no changes required, exiting...")
     return(invisible(latest))
   }
 
-  update_libphonenumber("carrier")
-  update_libphonenumber("geocoder")
-  update_libphonenumber("prefixmapper")
+  latest_car <- update_libphonenumber("carrier")
+  latest_geo <- update_libphonenumber("geocoder")
+  latest_pre <- update_libphonenumber("prefixmapper")
 
   message("dialrjars: updating version in DESCRIPTION to ", latest)
   desc::desc_set_version(latest)
 
+  news_txt <-
+    paste0(ifelse(is.null(latest), "", paste0("\n\n* Update libphonenumber jar to version ", latest)),
+           ifelse(is.null(latest_car), "", paste0("\n\n* Update carrier jar to version ", latest_car)),
+           ifelse(is.null(latest_geo), "", paste0("\n\n* Update geocoder jar to version ", latest_geo)),
+           ifelse(is.null(latest_pre), "", paste0("\n\n* Update prefixmapper jar to version ", latest_pre)))
+
   message("dialrjars: updating NEWS.md for version ", latest)
-  usethis:::use_news_heading(paste0(latest,
-                                    "\n\n* Update to libphonenumber version ",
-                                    latest))
+  usethis:::use_news_heading(paste0(latest, news_txt))
 
   if (usethis::ui_yeah("Commit changes to git?")) {
     message("dialrjars: committing changes to git")
