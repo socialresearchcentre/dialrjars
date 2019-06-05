@@ -20,4 +20,5 @@ There are no reverse dependencies.
 
 ## Notes
 
-This package stores the jars for the dialr package.
+This package stores the jars for the dialr package. All releases are checked with dialr before submission to CRAN.
+
