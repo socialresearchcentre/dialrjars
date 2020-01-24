@@ -8,14 +8,14 @@ update_libphonenumber <- function(jar_name = "libphonenumber", pkg_location = ".
   current <- sub(paste0("^", jar_name, "-(.*).jar$"), "\\1", jar_file)
   if (length(current) == 0) current <- "none"
 
-  latest <- read_xml(paste0("http://repo1.maven.org/maven2/com/googlecode/libphonenumber/", jar_name, "/maven-metadata.xml")) %>%
+  latest <- read_xml(paste0("https://repo1.maven.org/maven2/com/googlecode/libphonenumber/", jar_name, "/maven-metadata.xml")) %>%
     xml_find_first("//latest") %>%
     xml_text
 
   tryCatch({
     if (current != latest) {
       message("dialrjars: updating '", jar_name, "' jar from version ", current, " to ", latest)
-      download.file(paste0("http://repo1.maven.org/maven2/com/googlecode/libphonenumber/", jar_name, "/",
+      download.file(paste0("https://repo1.maven.org/maven2/com/googlecode/libphonenumber/", jar_name, "/",
                            latest, "/", jar_name, "-", latest, ".jar"),
                     paste0("inst/java/", jar_name, "-", latest, ".jar"),
                     quiet = TRUE, mode = "wb")
