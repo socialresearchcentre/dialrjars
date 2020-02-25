@@ -38,5 +38,5 @@ Copyright: See file COPYRIGHTS
 Encoding: UTF-8
 LazyData: true
 NeedsCompilation: no
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
 SystemRequirements: java (>= 1.6)
