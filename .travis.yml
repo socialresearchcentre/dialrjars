@@ -7,7 +7,7 @@ before_install:
   - java -version
   - echo PATH=$PATH
   - echo JAVA_HOME=$JAVA_HOME
-  - sudo R CMD javareconf
+  - sudo $(which R) CMD javareconf
 
 matrix:
   include:
