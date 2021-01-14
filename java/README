@@ -1,7 +1,7 @@
 Sources for the open source software component jars can be obtained
 from the following project websites:
 
-- libphonenumber: https://github.com/googlei18n/libphonenumber
+- libphonenumber: https://github.com/google/libphonenumber
   JARs: https://repo1.maven.org/maven2/com/googlecode/libphonenumber/libphonenumber/
 
 See also associated copyright information in inst/COPYRIGHTS.

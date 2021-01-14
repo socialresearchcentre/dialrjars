@@ -13,7 +13,7 @@ Collects 'libphonenumber' jars required for the
 Useful links:
 \itemize{
   \item \url{https://github.com/socialresearchcentre/dialrjars}
-  \item \url{https://github.com/googlei18n/libphonenumber}
+  \item \url{https://github.com/google/libphonenumber}
   \item Report bugs at \url{https://github.com/socialresearchcentre/dialrjars/issues}
 }
 

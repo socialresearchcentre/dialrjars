@@ -10,7 +10,7 @@
 
 ## Overview
 
-dialrjars provides the jars for [Google's libphonenumber library](https://github.com/googlei18n/libphonenumber) for use by the R package [dialr](https://github.com/socialresearchcentre/dialr).
+dialrjars provides the jars for [Google's libphonenumber library](https://github.com/google/libphonenumber) for use by the R package [dialr](https://github.com/socialresearchcentre/dialr).
 
 ## Installation
 
