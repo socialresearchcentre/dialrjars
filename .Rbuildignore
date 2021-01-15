@@ -1,6 +1,4 @@
 ^CRAN-RELEASE$
-^appveyor\.yml$
-^\.travis\.yml$
 ^cran-comments\.md$
 ^data-raw$
 ^.*\.Rproj$
