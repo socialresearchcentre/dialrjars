@@ -21,5 +21,3 @@ There are no reverse dependencies.
 ## Notes
 
 This package stores the jars for the dialr package. All releases are checked with dialr before submission to CRAN.
-
-This submission fixes a NOTE showing up in CRAN checks about a URL redirect.
