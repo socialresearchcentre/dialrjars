@@ -21,3 +21,5 @@ There are no reverse dependencies.
 ## Notes
 
 This package stores the jars for the dialr package. All releases are checked with dialr before submission to CRAN.
+
+This submission fixes a NOTE in CRAN checks about the unnecessary inclusion of LazyData in the DESCRIPTION file.

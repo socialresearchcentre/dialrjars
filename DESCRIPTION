@@ -36,7 +36,6 @@ Suggests:
     testthat
 Copyright: See file COPYRIGHTS
 Encoding: UTF-8
-LazyData: true
 NeedsCompilation: no
 RoxygenNote: 7.1.1
 SystemRequirements: java (>= 1.6)
