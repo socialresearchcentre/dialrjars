@@ -1,5 +1,7 @@
 # dialrjars 8.12.23
 
+* Change minimum R version to 3.6 to match the rJava package.
+
 * Update libphonenumber jar to version 8.12.23
 
 * Update carrier jar to version 1.149
