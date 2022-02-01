@@ -34,6 +34,9 @@ update_libphonenumber <- function(jar_name = "libphonenumber", pkg_location = ".
 }
 
 update_dialrjars <- function() {
+  message("dialrjars: pulling most recent from github")
+  gert::git_pull()
+
   current <- desc::desc_get_version()
 
   message("dialrjars: checking for package updates for version ", current)
@@ -62,15 +65,15 @@ update_dialrjars <- function() {
 
   if (usethis::ui_yeah("Commit changes to git?")) {
     message("dialrjars: committing changes to git")
-    git2r::add(path = "inst/java")
-    git2r::add(path = "DESCRIPTION")
-    git2r::add(path = "NEWS.md")
-    git2r::commit(message = paste0("Update libphonenumber to version ", latest))
+    gert::git_add(files = "inst/java")
+    gert::git_add(files = "DESCRIPTION")
+    gert::git_add(files = "NEWS.md")
+    gert::git_commit(message = paste0("Update libphonenumber to version ", latest))
   }
 
   if (usethis::ui_yeah("Push to github?")) {
     message("dialrjars: pushing to github")
-    tryCatch(git2r::push(),
+    tryCatch(gert::git_push(),
              error = function(e) {
                warning("dialrjars: failed to push to github with error:\n  ", e, call. = FALSE)
              })
