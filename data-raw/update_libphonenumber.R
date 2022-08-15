@@ -1,5 +1,5 @@
-library(xml2)
-library(dplyr)
+library(xml2, warn.conflicts = FALSE)
+library(dplyr, warn.conflicts = FALSE)
 
 update_libphonenumber <- function(jar_name = "libphonenumber", pkg_location = ".") {
   message("dialrjars: checking for latest version of '", jar_name, "' jar")
@@ -76,6 +76,14 @@ update_dialrjars <- function() {
     tryCatch(gert::git_push(),
              error = function(e) {
                warning("dialrjars: failed to push to github with error:\n  ", e, call. = FALSE)
+             })
+  }
+
+  if (usethis::ui_yeah("Publish new release?")) {
+    message("dialrjars: creating draft github release")
+    tryCatch(usethis::use_github_release(),
+             error = function(e) {
+               warning("dialrjars: failed to create draft release with error:\n  ", e, call. = FALSE)
              })
   }
 
