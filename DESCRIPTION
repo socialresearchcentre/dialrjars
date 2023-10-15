@@ -37,5 +37,5 @@ Suggests:
 Copyright: See file COPYRIGHTS
 Encoding: UTF-8
 NeedsCompilation: no
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.3
 SystemRequirements: java (>= 1.6)

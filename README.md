@@ -4,7 +4,7 @@
 <!-- badges: start -->
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![CRAN status](https://www.r-pkg.org/badges/version/dialrjars)](https://cran.r-project.org/package=dialrjars)
-[![R-CMD-check](https://github.com/socialresearchcentre/dialrjars/workflows/R-CMD-check/badge.svg)](https://github.com/socialresearchcentre/dialrjars/actions)
+[![R-CMD-check](https://github.com/socialresearchcentre/dialrjars/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/socialresearchcentre/dialrjars/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Overview

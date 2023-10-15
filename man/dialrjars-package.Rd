@@ -6,8 +6,7 @@
 \alias{dialrjars-package}
 \title{dialrjars: Required 'libphonenumber' jars for the 'dialr' Package}
 \description{
-Collects 'libphonenumber' jars required for the
-    'dialr' package.
+Collects 'libphonenumber' jars required for the 'dialr' package.
 }
 \seealso{
 Useful links:
