@@ -1,7 +1,7 @@
 Type: Package
 Package: dialrjars
 Title: Required 'libphonenumber' jars for the 'dialr' Package
-Version: 9.0.6
+Version: 9.0.7
 Authors@R: 
     c(person(given = "Danny",
              family = "Smith",
