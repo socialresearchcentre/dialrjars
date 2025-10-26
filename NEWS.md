@@ -1,3 +1,13 @@
+# dialrjars 9.0.17
+
+* Update libphonenumber jar to version 9.0.17
+
+* Update carrier jar to version 2.17
+
+* Update geocoder jar to version 3.17
+
+* Update prefixmapper jar to version 3.17
+
 # dialrjars 9.0.16
 
 * Update libphonenumber jar to version 9.0.16
